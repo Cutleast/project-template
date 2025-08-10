@@ -21,8 +21,15 @@ jobs:
         uses: astral-sh/setup-uv@v6
 
       - name: Set up virtual environment with uv
+        run: uv sync
+
+      - name: Generate Qt resources
+        shell: cmd
         run: |
-          uv sync
+          call update_lupdate_file.bat
+          call update_qts.bat
+          call compile_qts.bat
+          call compile_qrc.bat
 
       - name: Run Ruff
         run: |
@@ -33,14 +40,6 @@ jobs:
         run: |
           uv run pyright src
           uv run pyright tests
-      
-      - name: Setup resources
-        run: |
-          cmd /c update_lupdate_file.bat
-          cmd /c update_qts.bat
-          cmd /c compile_qts.bat
-          cmd /c compile_qrc.bat
-
+        
       - name: Run Pytest
-        run: |
-          uv run pytest
+        run: uv run pytest
