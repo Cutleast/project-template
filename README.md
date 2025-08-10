@@ -6,6 +6,10 @@ A repository template for my projects.
 
 After creating the repository from this template, complete the following before starting the development of your new project:
 
+1. Clone this repo by running this command: `git clone https://github.com/you/your-repository --recurse-submodules`.
+2. Fulfill the requirements below.
+3. Replace the placeholders below.
+
 ### Requirements
 
 - [uv](https://docs.astral.sh/uv/getting-started/installation/)
