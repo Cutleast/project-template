@@ -8,6 +8,7 @@ from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QMainWindow, QMessageBox
 
 from core.config.app_config import AppConfig
+from licenses import LICENSES
 
 from .main_widget import MainWidget
 from .menubar import MenuBar
@@ -81,7 +82,7 @@ class MainWindow(QMainWindow):
             app_version=App.APP_VERSION,
             app_icon=App.get().windowIcon(),
             app_license="",
-            licenses={},
+            licenses=LICENSES,
             parent=self,
         ).exec()
 
