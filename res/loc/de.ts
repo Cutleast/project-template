@@ -28,7 +28,7 @@
 <context>
     <name>AppSettings</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="94"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="95"/>
         <source>Basic App Settings</source>
         <translation>Grundlegende Appeinstellungen</translation>
     </message>
@@ -38,33 +38,33 @@
         <translation>Anzahl der neuesten zu behaltenden Logdateien</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="111"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="110"/>
         <source>Log Level</source>
         <translation>Logging Level</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="115"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="114"/>
         <source>Display log at the bottom of the main window</source>
         <translation>Log im unteren Bereich des Hauptfensters anzeigen</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="125"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="123"/>
         <source>Accent Color</source>
         <translation>Akzentfarbe</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="130"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="127"/>
         <source>UI Mode</source>
         <translation>UI-Modus</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="132"/>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="148"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="129"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="145"/>
         <source>Clear Cache</source>
         <translation>Cache leeren</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="158"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="155"/>
         <source>Accent color must be a valid hexadecimal color code!</source>
         <translation>Akzentfarbe muss ein gültiger hexadezimaler Farbcode sein!</translation>
     </message>
@@ -176,17 +176,17 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="src/ui/main_window.py" line="70"/>
+        <location filename="src/ui/main_window.py" line="71"/>
         <source>No Updates Available</source>
         <translation>Keine Updates verfügbar</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="71"/>
+        <location filename="src/ui/main_window.py" line="72"/>
         <source>There are no updates available.</source>
         <translation>Es sind keine Updates verfügbar.</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="89"/>
+        <location filename="src/ui/main_window.py" line="90"/>
         <source>About Qt</source>
         <translation>Über Qt</translation>
     </message>
