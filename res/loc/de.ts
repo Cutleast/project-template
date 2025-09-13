@@ -4,23 +4,23 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="50"/>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="63"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="52"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="65"/>
         <source>About</source>
         <translation>Über</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="92"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="95"/>
         <source>Created by Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Licensed under </source>
         <translation>Erstellt von Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Lizensiert unter </translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="96"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="99"/>
         <source>&lt;&lt;Put your translator information here.&gt;&gt;</source>
         <translation>&lt;&lt;Put your translator information here.&gt;&gt;</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="107"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="110"/>
         <source>Used Software</source>
         <translation>Verwendete Software</translation>
     </message>
@@ -28,43 +28,43 @@
 <context>
     <name>AppSettings</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="95"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="97"/>
         <source>Basic App Settings</source>
         <translation>Grundlegende Appeinstellungen</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="104"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="106"/>
         <source>Number of newest log files to keep</source>
         <translation>Anzahl der neuesten zu behaltenden Logdateien</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="110"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="112"/>
         <source>Log Level</source>
         <translation>Logging Level</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="114"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="117"/>
         <source>Display log at the bottom of the main window</source>
         <translation>Log im unteren Bereich des Hauptfensters anzeigen</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="123"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="126"/>
         <source>Accent Color</source>
         <translation>Akzentfarbe</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="127"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="130"/>
         <source>UI Mode</source>
         <translation>UI-Modus</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="129"/>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="145"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="132"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="148"/>
         <source>Clear Cache</source>
         <translation>Cache leeren</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="155"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="158"/>
         <source>Accent color must be a valid hexadecimal color code!</source>
         <translation>Akzentfarbe muss ein gültiger hexadezimaler Farbcode sein!</translation>
     </message>
@@ -132,27 +132,27 @@
 <context>
     <name>LoadingDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="266"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="263"/>
         <source>Elapsed time:</source>
         <translation>Vergangene Zeit:</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="354"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="351"/>
         <source>Cancel?</source>
         <translation>Abbrechen?</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="360"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="357"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation>Bist du sicher, dass du abbrechen möchtest? Je nach laufendem Vorgang kann dies unbeabsichtigte Konsequenzen haben!</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="365"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="362"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="366"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="363"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -242,6 +242,49 @@
         <location filename="src/ui/menubar.py" line="110"/>
         <source>About Qt</source>
         <translation>Über Qt</translation>
+    </message>
+</context>
+<context>
+    <name>Position</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="69"/>
+        <source>Top</source>
+        <translation>Oben</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="70"/>
+        <source>Bottom</source>
+        <translation>Unten</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="71"/>
+        <source>Left</source>
+        <translation>Links</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="72"/>
+        <source>Right</source>
+        <translation>Rechts</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="73"/>
+        <source>Top Left</source>
+        <translation>Oben links</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="76"/>
+        <source>Top Right</source>
+        <translation>Oben rechts</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="79"/>
+        <source>Bottom Left</source>
+        <translation>Unten links</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="82"/>
+        <source>Bottom Right</source>
+        <translation>Unten rechts</translation>
     </message>
 </context>
 <context>
