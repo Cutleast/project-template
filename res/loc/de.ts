@@ -77,33 +77,33 @@
 <context>
     <name>ErrorDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="98"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="109"/>
         <source>Continue</source>
         <translation>Fortfahren</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="103"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="114"/>
         <source>Exit</source>
         <translation>Beenden</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="107"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="118"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="113"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="124"/>
         <source>Copy error details...</source>
         <translation>Fehlerdetails kopieren...</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="122"/>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="141"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="132"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="151"/>
         <source>Show details...</source>
         <translation>Details einblenden...</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="135"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="145"/>
         <source>Hide details...</source>
         <translation>Details ausblenden...</translation>
     </message>
@@ -132,27 +132,27 @@
 <context>
     <name>LoadingDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="263"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="269"/>
         <source>Elapsed time:</source>
         <translation>Vergangene Zeit:</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="351"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="357"/>
         <source>Cancel?</source>
         <translation>Abbrechen?</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="357"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="363"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation>Bist du sicher, dass du abbrechen möchtest? Je nach laufendem Vorgang kann dies unbeabsichtigte Konsequenzen haben!</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="362"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="368"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="363"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="369"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -285,6 +285,34 @@
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="82"/>
         <source>Bottom Right</source>
         <translation>Unten rechts</translation>
+    </message>
+</context>
+<context>
+    <name>ProgressDialog</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="299"/>
+        <source>Elapsed time:</source>
+        <translation>Vergangene Zeit:</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="351"/>
+        <source>Cancel?</source>
+        <translation>Abbrechen?</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="357"/>
+        <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
+        <translation>Bist du sicher, dass du abbrechen möchtest? Je nach laufendem Vorgang kann dies unbeabsichtigte Konsequenzen haben!</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="362"/>
+        <source>No</source>
+        <translation>Nein</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="363"/>
+        <source>Yes</source>
+        <translation>Ja</translation>
     </message>
 </context>
 <context>
@@ -430,9 +458,14 @@
         <translation>Anfrage an &apos;{0}&apos; ist fehlgeschlagen!</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exceptions.py" line="105"/>
+        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exceptions.py" line="107"/>
         <source>Request to &apos;{0}&apos; failed with status code {1}!</source>
         <translation>Anfrage an &apos;{0}&apos; ist mit Status Code {1} fehlgeschlagen!</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exceptions.py" line="118"/>
+        <source>The process is incomplete and has no result!</source>
+        <translation>Der Vorgang ist unvollständig und hat kein Ergebnis!</translation>
     </message>
 </context>
 </TS>
