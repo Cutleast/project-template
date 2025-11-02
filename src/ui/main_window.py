@@ -2,9 +2,12 @@
 Copyright (c) Cutleast
 """
 
+from typing import override
+
 from cutleast_core_lib.core.utilities.updater import Updater
 from cutleast_core_lib.ui.widgets.about_dialog import AboutDialog
 from PySide6.QtCore import Qt
+from PySide6.QtGui import QCloseEvent
 from PySide6.QtWidgets import QMainWindow, QMessageBox
 
 from core.config.app_config import AppConfig
@@ -88,3 +91,9 @@ class MainWindow(QMainWindow):
 
     def __show_about_qt(self) -> None:
         QMessageBox.aboutQt(self, self.tr("About Qt"))
+
+    @override
+    def closeEvent(self, event: QCloseEvent) -> None:
+        self.__status_bar.close_log_window()
+
+        return super().closeEvent(event)

@@ -5,8 +5,8 @@ Copyright (c) Cutleast
 import os
 import subprocess
 
-import qtawesome as qta
 from cutleast_core_lib.core.utilities.exe_info import get_execution_info
+from cutleast_core_lib.ui.utilities.icon_provider import IconProvider
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (
     QDialog,
@@ -64,9 +64,7 @@ class SettingsDialog(QDialog):
         self.__vlayout.addLayout(hlayout)
 
         icon_label = QLabel()
-        icon_label.setPixmap(
-            qta.icon("mdi6.cog", color=self.palette().text().color()).pixmap(42, 42)
-        )
+        icon_label.setPixmap(IconProvider.get_qta_icon("mdi6.cog").pixmap(42, 42))
         hlayout.addWidget(icon_label)
 
         title_label = QLabel(self.tr("Settings"))

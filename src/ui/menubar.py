@@ -4,12 +4,10 @@ Copyright (c) Cutleast
 
 import webbrowser
 
-import qtawesome as qta
 from cutleast_core_lib.core.utilities.updater import Updater
 from cutleast_core_lib.ui.utilities.icon_provider import IconProvider
 from cutleast_core_lib.ui.widgets.menu import Menu
 from PySide6.QtCore import Signal
-from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QMenuBar
 
 
@@ -56,9 +54,7 @@ class MenuBar(QMenuBar):
         self.addMenu(file_menu)
 
         settings_action = file_menu.addAction(self.tr("Settings"))
-        settings_action.setIcon(
-            qta.icon("mdi6.cog", color=self.palette().text().color())
-        )
+        settings_action.setIcon(IconProvider.get_qta_icon("mdi6.cog"))
         settings_action.triggered.connect(self.settings_signal.emit)
 
         file_menu.addSeparator()
@@ -72,9 +68,7 @@ class MenuBar(QMenuBar):
         self.addMenu(help_menu)
 
         update_action = help_menu.addAction(self.tr("Check for updates..."))
-        update_action.setIcon(
-            qta.icon("mdi6.refresh", color=self.palette().text().color())
-        )
+        update_action.setIcon(IconProvider.get_qta_icon("mdi6.refresh"))
         update_action.triggered.connect(self.updater_signal.emit)
         update_action.setVisible(Updater.has_instance())
 
@@ -83,28 +77,24 @@ class MenuBar(QMenuBar):
         discord_action = help_menu.addAction(
             self.tr("Get support on our Discord server...")
         )
-        discord_action.setIcon(QIcon(":/icons/discord.png"))
+        discord_action.setIcon(IconProvider.get_icon("discord"))
         discord_action.setToolTip(MenuBar.DISCORD_URL)
         discord_action.triggered.connect(lambda: webbrowser.open(MenuBar.DISCORD_URL))
 
         nm_action = help_menu.addAction(self.tr("Open mod page on Nexus Mods..."))
-        nm_action.setIcon(QIcon(":/icons/nexus_mods.png"))
+        nm_action.setIcon(IconProvider.get_icon("nexus_mods"))
         nm_action.setToolTip(MenuBar.NEXUSMODS_URL)
         nm_action.triggered.connect(lambda: webbrowser.open(MenuBar.NEXUSMODS_URL))
 
         github_action = help_menu.addAction(self.tr("View source code on GitHub..."))
-        github_action.setIcon(
-            qta.icon("mdi6.github", color=self.palette().text().color())
-        )
+        github_action.setIcon(IconProvider.get_qta_icon("mdi6.github"))
         github_action.setToolTip(MenuBar.GITHUB_URL)
         github_action.triggered.connect(lambda: webbrowser.open(MenuBar.GITHUB_URL))
 
         help_menu.addSeparator()
 
         about_action = help_menu.addAction(self.tr("About"))
-        about_action.setIcon(
-            qta.icon("fa5s.info-circle", color=self.palette().text().color())
-        )
+        about_action.setIcon(IconProvider.get_qta_icon("fa5s.info-circle"))
         about_action.triggered.connect(self.about_signal.emit)
 
         about_qt_action = help_menu.addAction(self.tr("About Qt"))

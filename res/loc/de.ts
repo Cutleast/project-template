@@ -10,12 +10,12 @@
         <translation>Über</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="95"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="91"/>
         <source>Created by Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Licensed under </source>
         <translation>Erstellt von Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Lizensiert unter </translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="99"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="98"/>
         <source>&lt;&lt;Put your translator information here.&gt;&gt;</source>
         <translation>&lt;&lt;Put your translator information here.&gt;&gt;</translation>
     </message>
@@ -64,7 +64,7 @@
         <translation>Cache leeren</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="158"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="157"/>
         <source>Accent color must be a valid hexadecimal color code!</source>
         <translation>Akzentfarbe muss ein gültiger hexadezimaler Farbcode sein!</translation>
     </message>
@@ -132,7 +132,7 @@
 <context>
     <name>LoadingDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="269"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="268"/>
         <source>Elapsed time:</source>
         <translation>Vergangene Zeit:</translation>
     </message>
@@ -142,7 +142,7 @@
         <translation>Abbrechen?</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="363"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="360"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation>Bist du sicher, dass du abbrechen möchtest? Je nach laufendem Vorgang kann dies unbeabsichtigte Konsequenzen haben!</translation>
     </message>
@@ -176,17 +176,17 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="src/ui/main_window.py" line="71"/>
+        <location filename="src/ui/main_window.py" line="74"/>
         <source>No Updates Available</source>
         <translation>Keine Updates verfügbar</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="72"/>
+        <location filename="src/ui/main_window.py" line="75"/>
         <source>There are no updates available.</source>
         <translation>Es sind keine Updates verfügbar.</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="90"/>
+        <location filename="src/ui/main_window.py" line="93"/>
         <source>About Qt</source>
         <translation>Über Qt</translation>
     </message>
@@ -194,52 +194,52 @@
 <context>
     <name>MenuBar</name>
     <message>
-        <location filename="src/ui/menubar.py" line="55"/>
+        <location filename="src/ui/menubar.py" line="53"/>
         <source>File</source>
         <translation>Datei</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="58"/>
+        <location filename="src/ui/menubar.py" line="56"/>
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="66"/>
+        <location filename="src/ui/menubar.py" line="62"/>
         <source>Exit</source>
         <translation>Beenden</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="71"/>
+        <location filename="src/ui/menubar.py" line="67"/>
         <source>Help</source>
         <translation>Hilfe</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="74"/>
+        <location filename="src/ui/menubar.py" line="70"/>
         <source>Check for updates...</source>
         <translation>Nach Updates suchen...</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="85"/>
+        <location filename="src/ui/menubar.py" line="78"/>
         <source>Get support on our Discord server...</source>
         <translation>Support auf unserem Discord Server erhalten...</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="90"/>
+        <location filename="src/ui/menubar.py" line="84"/>
         <source>Open mod page on Nexus Mods...</source>
         <translation>Modseite auf Nexus Mods öffnen...</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="95"/>
+        <location filename="src/ui/menubar.py" line="89"/>
         <source>View source code on GitHub...</source>
         <translation>Quellcode auf GitHub ansehen...</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="104"/>
+        <location filename="src/ui/menubar.py" line="96"/>
         <source>About</source>
         <translation>Über</translation>
     </message>
     <message>
-        <location filename="src/ui/menubar.py" line="110"/>
+        <location filename="src/ui/menubar.py" line="100"/>
         <source>About Qt</source>
         <translation>Über Qt</translation>
     </message>
@@ -272,17 +272,17 @@
         <translation>Oben links</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="76"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="74"/>
         <source>Top Right</source>
         <translation>Oben rechts</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="79"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="77"/>
         <source>Bottom Left</source>
         <translation>Unten links</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="82"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="80"/>
         <source>Bottom Right</source>
         <translation>Unten rechts</translation>
     </message>
@@ -290,7 +290,7 @@
 <context>
     <name>ProgressDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="299"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="298"/>
         <source>Elapsed time:</source>
         <translation>Vergangene Zeit:</translation>
     </message>
@@ -300,7 +300,7 @@
         <translation>Abbrechen?</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="357"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="354"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation>Bist du sicher, dass du abbrechen möchtest? Je nach laufendem Vorgang kann dies unbeabsichtigte Konsequenzen haben!</translation>
     </message>
@@ -338,7 +338,7 @@
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="78"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="77"/>
         <source>Settings marked with * require a restart to take effect.</source>
         <translation>Mit * markierte Einstellungen benötigen einen Neustart, um wirksam zu werden.</translation>
     </message>
@@ -358,7 +358,7 @@
         <translation>Neustart erforderlich</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="121"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="119"/>
         <source>The app must be restarted for the changes to take effect! Restart now?</source>
         <translation>Die App muss neugestartet werden, damit die Änderungen wirksam werden! Jetzt neustarten?</translation>
     </message>
@@ -381,12 +381,12 @@
         <translation>Unterstütze mich auf Ko-Fi</translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="67"/>
+        <location filename="src/ui/statusbar.py" line="64"/>
         <source>Copy log to clipboard</source>
         <translation>Log in Zwischenablage kopieren</translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="78"/>
+        <location filename="src/ui/statusbar.py" line="73"/>
         <source>View log</source>
         <translation>Log anschauen</translation>
     </message>
@@ -417,12 +417,12 @@
         <translation>Ein Update ist zum Herunterladen verfügbar!</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/updater_dialog.py" line="43"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/updater_dialog.py" line="42"/>
         <source>Installed version</source>
         <translation>Installierte Version</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/updater_dialog.py" line="46"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/updater_dialog.py" line="45"/>
         <source>Latest version</source>
         <translation>Neueste Version</translation>
     </message>
@@ -437,7 +437,7 @@
         <translation>Update ignorieren</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/updater_dialog.py" line="78"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/updater_dialog.py" line="77"/>
         <source>Download Update</source>
         <translation>Update herunterladen</translation>
     </message>
@@ -453,17 +453,17 @@
 <context>
     <name>exceptions</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exceptions.py" line="92"/>
+        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exceptions.py" line="89"/>
         <source>Request to &apos;{0}&apos; failed!</source>
         <translation>Anfrage an &apos;{0}&apos; ist fehlgeschlagen!</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exceptions.py" line="107"/>
+        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exceptions.py" line="102"/>
         <source>Request to &apos;{0}&apos; failed with status code {1}!</source>
         <translation>Anfrage an &apos;{0}&apos; ist mit Status Code {1} fehlgeschlagen!</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exceptions.py" line="118"/>
+        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exceptions.py" line="115"/>
         <source>The process is incomplete and has no result!</source>
         <translation>Der Vorgang ist unvollständig und hat kein Ergebnis!</translation>
     </message>

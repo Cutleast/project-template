@@ -4,13 +4,13 @@ Copyright (c) Cutleast
 
 from typing import Optional
 
-import qtawesome as qta
 from cutleast_core_lib.core.utilities.logger import Logger
 from cutleast_core_lib.core.utilities.truncate import raw_string
+from cutleast_core_lib.ui.utilities.icon_provider import IconProvider
+from cutleast_core_lib.ui.widgets.copy_button import CopyButton
 from cutleast_core_lib.ui.widgets.link_button import LinkButton
 from cutleast_core_lib.ui.widgets.log_window import LogWindow
 from PySide6.QtCore import QSize, Qt, Signal
-from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QApplication, QLabel, QPushButton, QStatusBar
 
 
@@ -50,16 +50,13 @@ class StatusBar(QStatusBar):
         kofi_button = LinkButton(
             StatusBar.KOFI_URL,
             self.tr("Support me on Ko-fi"),
-            QIcon(":/icons/ko-fi.png"),
+            IconProvider.get_icon("ko-fi"),
         )
         # kofi_button.setFixedHeight(20)
         self.addPermanentWidget(kofi_button)
 
-        copy_log_button = QPushButton()
+        copy_log_button = CopyButton()
         copy_log_button.setFixedSize(20, 20)
-        copy_log_button.setIcon(
-            qta.icon("mdi6.content-copy", color=self.palette().text().color())
-        )
         copy_log_button.setIconSize(QSize(16, 16))
         copy_log_button.clicked.connect(
             lambda: QApplication.clipboard().setText(self.logger.get_content())
@@ -70,9 +67,7 @@ class StatusBar(QStatusBar):
 
         open_log_button = QPushButton()
         open_log_button.setFixedSize(20, 20)
-        open_log_button.setIcon(
-            qta.icon("fa5s.external-link-alt", color=self.palette().text().color())
-        )
+        open_log_button.setIcon(IconProvider.get_qta_icon("fa5s.external-link-alt"))
         open_log_button.setIconSize(QSize(16, 16))
         open_log_button.clicked.connect(self.__open_log_window)
         open_log_button.setToolTip(self.tr("View log"))
@@ -87,6 +82,10 @@ class StatusBar(QStatusBar):
         self.__log_window.show()
 
     def close_log_window(self) -> None:
+        """
+        Closes the log window if it is open.
+        """
+
         if self.__log_window is not None:
             self.__log_window.close()
 
