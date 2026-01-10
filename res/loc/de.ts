@@ -245,6 +245,14 @@
     </message>
 </context>
 <context>
+    <name>PlaceholderDropdown</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/placeholder_dropdown.py" line="28"/>
+        <source>Please select...</source>
+        <translation>Bitte auswählen...</translation>
+    </message>
+</context>
+<context>
     <name>Position</name>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="69"/>
@@ -290,27 +298,27 @@
 <context>
     <name>ProgressDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="298"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="260"/>
         <source>Elapsed time:</source>
         <translation>Vergangene Zeit:</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="351"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="313"/>
         <source>Cancel?</source>
         <translation>Abbrechen?</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="354"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="316"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation>Bist du sicher, dass du abbrechen möchtest? Je nach laufendem Vorgang kann dies unbeabsichtigte Konsequenzen haben!</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="362"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="324"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="363"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="325"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -318,12 +326,17 @@
 <context>
     <name>SearchBar</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/search_bar.py" line="38"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/search_bar.py" line="39"/>
         <source>Search...</source>
         <translation>Suchen...</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/search_bar.py" line="52"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/search_bar.py" line="53"/>
+        <source>Live search disabled. Press Enter to search.</source>
+        <translation>Echzeitsuche deaktiviert. Drücke Enter, um zu suchen.</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/search_bar.py" line="64"/>
         <source>Toggle case sensitivity</source>
         <translation>Groß-/Kleinschreibung beachten</translation>
     </message>
@@ -332,43 +345,43 @@
     <name>SettingsDialog</name>
     <message>
         <location filename="src/ui/settings/settings_dialog.py" line="45"/>
-        <location filename="src/ui/settings/settings_dialog.py" line="72"/>
-        <location filename="src/ui/settings/settings_dialog.py" line="102"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="70"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="100"/>
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="77"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="75"/>
         <source>Settings marked with * require a restart to take effect.</source>
         <translation>Mit * markierte Einstellungen benötigen einen Neustart, um wirksam zu werden.</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="89"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="87"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="95"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="93"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="116"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="114"/>
         <source>Restart required</source>
         <translation>Neustart erforderlich</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="119"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="117"/>
         <source>The app must be restarted for the changes to take effect! Restart now?</source>
         <translation>Die App muss neugestartet werden, damit die Änderungen wirksam werden! Jetzt neustarten?</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="125"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="123"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="126"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="124"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
