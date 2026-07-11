@@ -5,13 +5,13 @@ Copyright (c) Cutleast
 from typing import Optional
 
 from cutleast_core_lib.core.utilities.logger import Logger
-from cutleast_core_lib.core.utilities.truncate import raw_string
 from cutleast_core_lib.ui.utilities.icon_provider import IconProvider
 from cutleast_core_lib.ui.widgets.copy_button import CopyButton
+from cutleast_core_lib.ui.widgets.elided_label import ElidedLabel
 from cutleast_core_lib.ui.widgets.link_button import LinkButton
 from cutleast_core_lib.ui.widgets.log_window import LogWindow
 from PySide6.QtCore import QSize, Qt, Signal
-from PySide6.QtWidgets import QApplication, QLabel, QPushButton, QStatusBar
+from PySide6.QtWidgets import QApplication, QPushButton, QStatusBar
 
 
 class StatusBar(QStatusBar):
@@ -34,12 +34,12 @@ class StatusBar(QStatusBar):
         self.logger = Logger.get()
         self.logger.set_callback(self.log_signal.emit)
 
-        self.status_label = QLabel()
-        self.status_label.setObjectName("protocol")
+        self.status_label = ElidedLabel()
+        self.status_label.setProperty("monospace", True)
         self.status_label.setTextFormat(Qt.TextFormat.PlainText)
         self.log_signal.connect(
             lambda text: self.status_label.setText(
-                raw_string(text.removesuffix("\n"), max_length=200)
+                f"{text!r}"[1:-1].removesuffix("\\n")
             ),
             Qt.ConnectionType.QueuedConnection,
         )
@@ -67,7 +67,7 @@ class StatusBar(QStatusBar):
 
         open_log_button = QPushButton()
         open_log_button.setFixedSize(20, 20)
-        open_log_button.setIcon(IconProvider.get_qta_icon("fa5s.external-link-alt"))
+        open_log_button.setIcon(IconProvider.get_qta_icon("mdi6.open-in-new"))
         open_log_button.setIconSize(QSize(16, 16))
         open_log_button.clicked.connect(self.__open_log_window)
         open_log_button.setToolTip(self.tr("View log"))

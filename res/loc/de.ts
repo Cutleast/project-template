@@ -75,35 +75,100 @@
     </message>
 </context>
 <context>
+    <name>CollapsibleLabel</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/collapsible_label.py" line="82"/>
+        <source>Reduce</source>
+        <translation>Einklappen</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/collapsible_label.py" line="90"/>
+        <source>Expand</source>
+        <translation>Aufklappen</translation>
+    </message>
+</context>
+<context>
+    <name>CollapsibleTextEdit</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/collapsible_text_edit.py" line="66"/>
+        <source>Reduce</source>
+        <translation>Einklappen</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/collapsible_text_edit.py" line="75"/>
+        <source>Expand</source>
+        <translation>Aufklappen</translation>
+    </message>
+</context>
+<context>
+    <name>ContextMenu</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="103"/>
+        <source>Duplicate item</source>
+        <translation>Element duplizieren</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="111"/>
+        <source>Cut item</source>
+        <translation>Element ausschneiden</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="117"/>
+        <source>Copy item</source>
+        <translation>Element kopieren</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="123"/>
+        <source>Paste item</source>
+        <translation>Element einfügen</translation>
+    </message>
+</context>
+<context>
+    <name>Downloader</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/core/downloader.py" line="135"/>
+        <source>Downloading &apos;{0}&apos;...</source>
+        <translation>&apos;{0}&apos; wird heruntergeladen...</translation>
+    </message>
+</context>
+<context>
+    <name>DragHandle</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/flex_container/drag_handle.py" line="52"/>
+        <source>Drag to rearrange</source>
+        <translation>Zum Neuanordnen ziehen</translation>
+    </message>
+</context>
+<context>
     <name>ErrorDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="109"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="111"/>
         <source>Continue</source>
         <translation>Fortfahren</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="114"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="116"/>
         <source>Exit</source>
         <translation>Beenden</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="118"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="120"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="124"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="126"/>
         <source>Copy error details...</source>
         <translation>Fehlerdetails kopieren...</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="132"/>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="151"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="134"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="153"/>
         <source>Show details...</source>
         <translation>Details einblenden...</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="145"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/error_dialog.py" line="147"/>
         <source>Hide details...</source>
         <translation>Details ausblenden...</translation>
     </message>
@@ -132,27 +197,27 @@
 <context>
     <name>LoadingDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="268"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="269"/>
         <source>Elapsed time:</source>
         <translation>Vergangene Zeit:</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="357"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="358"/>
         <source>Cancel?</source>
         <translation>Abbrechen?</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="360"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="361"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation>Bist du sicher, dass du abbrechen möchtest? Je nach laufendem Vorgang kann dies unbeabsichtigte Konsequenzen haben!</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="368"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="369"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="369"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/loading_dialog.py" line="370"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -255,42 +320,42 @@
 <context>
     <name>Position</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="69"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/utilities/position.py" line="42"/>
         <source>Top</source>
         <translation>Oben</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="70"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/utilities/position.py" line="43"/>
         <source>Bottom</source>
         <translation>Unten</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="71"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/utilities/position.py" line="44"/>
         <source>Left</source>
         <translation>Links</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="72"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/utilities/position.py" line="45"/>
         <source>Right</source>
         <translation>Rechts</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="73"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/utilities/position.py" line="46"/>
         <source>Top Left</source>
         <translation>Oben links</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="74"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/utilities/position.py" line="47"/>
         <source>Top Right</source>
         <translation>Oben rechts</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="77"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/utilities/position.py" line="48"/>
         <source>Bottom Left</source>
         <translation>Unten links</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/toast.py" line="80"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/utilities/position.py" line="49"/>
         <source>Bottom Right</source>
         <translation>Unten rechts</translation>
     </message>
@@ -298,27 +363,32 @@
 <context>
     <name>ProgressDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="260"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="98"/>
+        <source>Cancel</source>
+        <translation>Abbrechen</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="155"/>
         <source>Elapsed time:</source>
         <translation>Vergangene Zeit:</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="313"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="208"/>
         <source>Cancel?</source>
         <translation>Abbrechen?</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="316"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="211"/>
         <source>Are you sure you want to cancel? This may have unwanted consequences, depending on the current running process!</source>
         <translation>Bist du sicher, dass du abbrechen möchtest? Je nach laufendem Vorgang kann dies unbeabsichtigte Konsequenzen haben!</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="324"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="219"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/progress_dialog.py" line="325"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/dialog.py" line="220"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -405,6 +475,55 @@
     </message>
 </context>
 <context>
+    <name>StylesheetEditorWidget</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="47"/>
+        <source>Apply stylesheet</source>
+        <translation>Stylesheet anwenden</translation>
+    </message>
+</context>
+<context>
+    <name>TreeMenu</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_menu.py" line="35"/>
+        <source>Expand all</source>
+        <translation>Alle aufklappen</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_menu.py" line="41"/>
+        <source>Collapse all</source>
+        <translation>Alle einklappen</translation>
+    </message>
+</context>
+<context>
+    <name>TreeWidgetEditor</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="234"/>
+        <source>Add new item...</source>
+        <translation>Neues Element hinzufügen...</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="240"/>
+        <source>Remove selected item(s)...</source>
+        <translation>Ausgewählte(s) Element(e) entfernen...</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="240"/>
+        <source>Del</source>
+        <translation>Entf</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="248"/>
+        <source>Edit selected item...</source>
+        <translation>Ausgewähltes Element bearbeiten...</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="248"/>
+        <source>Double click</source>
+        <translation>Doppelklick</translation>
+    </message>
+</context>
+<context>
     <name>UIMode</name>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/utilities/ui_mode.py" line="24"/>
@@ -479,6 +598,11 @@
         <location filename="core-lib/src/cutleast_core_lib/core/utilities/exceptions.py" line="115"/>
         <source>The process is incomplete and has no result!</source>
         <translation>Der Vorgang ist unvollständig und hat kein Ergebnis!</translation>
+    </message>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exceptions.py" line="127"/>
+        <source>The task was cancelled!</source>
+        <translation>Der Vorgang wurde abgebrochen!</translation>
     </message>
 </context>
 </TS>
