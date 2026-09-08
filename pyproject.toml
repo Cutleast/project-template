@@ -43,6 +43,7 @@ ignore = [
     "D205",  # 1 blank line required between summary line and description
     "D212",  # Multi-line docstring summary should start at the second line
     "D415",  # First line should end with a period
+    "PLC0414",  # Import alias does not rename original package
     "RUF012",  # Mutable default values on class-level
     "UP040",  # type MyTypeAlias instead of MyTypeAlias: TypeAlias (still incompatible with Nuitka)
     "UP045",  # T | None instead of Optional[T]
