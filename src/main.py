@@ -6,7 +6,7 @@ import sys
 from argparse import Namespace
 
 from app import App
-from resources_rc import qt_resource_data as qt_resource_data
+from resources_rc import qt_resource_data as qt_resource_data  # noqa: PLC0414
 
 if __name__ == "__main__":
     app = App(Namespace())

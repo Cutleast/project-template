@@ -5,7 +5,7 @@ description = "Project Template"  # Enter the display name of the project here
 authors = [{ name = "Cutleast", email = "cutleast@gmail.com" }]
 license = { file = "LICENSE" }
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.14"
 dependencies = [
     "cutleast-core-lib",
 ]
@@ -31,6 +31,31 @@ members = [
 [tool.uv.sources]
 cutleast-core-lib = { workspace = true }
 
+[tool.ruff]
+line-length = 89
+
+[tool.ruff.lint]
+extend-select = ["D"]
+ignore = [
+    "D105",  # Missing docstring in magic method
+    "D200",  # One-line docstring should fit on one line
+    "D202",  # No blank line before function
+    "D205",  # 1 blank line required between summary line and description
+    "D212",  # Multi-line docstring summary should start at the second line
+    "D415",  # First line should end with a period
+    "RUF012",  # Mutable default values on class-level
+    "UP040",  # type MyTypeAlias instead of MyTypeAlias: TypeAlias (still incompatible with Nuitka)
+    "UP045",  # T | None instead of Optional[T]
+    "UP046",  # New type-parameter syntax for generic classes (still incompatible with Nuitka, see https://github.com/Nuitka/Nuitka/issues/2930)
+    "UP047",  # New type-parameter syntax for generic functions (still incompatible with Nuitka, see https://github.com/Nuitka/Nuitka/issues/2930)
+]
+
+[tool.ruff.lint.per-file-ignores]
+"resources_rc.py" = ["D100", "D103"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src", "tests"]
@@ -42,9 +67,9 @@ log_cli_format = "[%(asctime)s.%(msecs)03d][%(levelname)s][%(name)s.%(funcName)s
 [tool.pyright]
 include = ["src", "tests"]
 typeCheckingMode = "strict"
-exclude = ["**/__pycache__"]
+exclude = ["**/__pycache__", "**/*.old", "src/resources_rc.py", "**/node_modules", "**/.*", ".venv"]
 stubPath = "./stubs"
-extraPaths = ["./src"]
+extraPaths = ["src", "core-lib/src"]
 
 # Check here for a full list of options: https://github.com/microsoft/pyright/blob/main/docs/configuration.md#diagnostic-settings-defaults
 deprecateTypingAliases = false
@@ -54,6 +79,7 @@ reportDuplicateImport = true
 reportIncompleteStub = "warning"
 reportIncompatibleMethodOverride = "warning"
 reportInconsistentConstructor = "warning"
+reportImplicitAbstractClass = "error"
 reportImplicitOverride = "warning"
 reportInvalidStubStatement = "warning"
 reportMatchNotExhaustive = false
@@ -62,7 +88,6 @@ reportMissingParameterType = "error"
 reportMissingTypeArgument = false
 reportMissingTypeStubs = false
 reportPrivateUsage = "warning"
-reportShadowedImports = "warning"
 reportTypeCommentUsage = "information"
 reportUnknownArgumentType = false
 reportUnknownLambdaType = false

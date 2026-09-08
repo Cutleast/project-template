@@ -18,6 +18,7 @@ class AppSettings(BaseAppSettings):
 
     __language_box: EnumDropdown[AppConfig.AppLanguage]
 
+    @override
     def __init__(self, initial_config: BaseAppConfig) -> None:
         super().__init__(initial_config)
 

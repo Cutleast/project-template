@@ -5,6 +5,7 @@ Copyright (c) Cutleast
 from typing import override
 
 from cutleast_core_lib.core.utilities.updater import Updater
+from cutleast_core_lib.ui.utilities.window_manager import WindowManager
 from cutleast_core_lib.ui.widgets.about_dialog import AboutDialog
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QCloseEvent
@@ -31,6 +32,11 @@ class MainWindow(QMainWindow):
     __status_bar: StatusBar
 
     def __init__(self, app_config: AppConfig) -> None:
+        """
+        Args:
+            app_config (AppConfig): The application config.
+        """
+
         super().__init__()
 
         self.__app_config = app_config
@@ -94,6 +100,6 @@ class MainWindow(QMainWindow):
 
     @override
     def closeEvent(self, event: QCloseEvent) -> None:
-        self.__status_bar.close_log_window()
+        WindowManager.get().close_all()
 
         return super().closeEvent(event)

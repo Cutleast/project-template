@@ -2,16 +2,17 @@
 Copyright (c) Cutleast
 """
 
-from typing import Optional
+from typing import Optional, cast
 
 from cutleast_core_lib.core.utilities.logger import Logger
 from cutleast_core_lib.ui.utilities.icon_provider import IconProvider
+from cutleast_core_lib.ui.utilities.window_manager import WindowManager
 from cutleast_core_lib.ui.widgets.copy_button import CopyButton
 from cutleast_core_lib.ui.widgets.elided_label import ElidedLabel
-from cutleast_core_lib.ui.widgets.link_button import LinkButton
+from cutleast_core_lib.ui.widgets.icon_button import IconButton
 from cutleast_core_lib.ui.widgets.log_window import LogWindow
-from PySide6.QtCore import QSize, Qt, Signal
-from PySide6.QtWidgets import QApplication, QPushButton, QStatusBar
+from PySide6.QtCore import Qt, Signal
+from PySide6.QtWidgets import QApplication, QLabel, QStatusBar
 
 
 class StatusBar(QStatusBar):
@@ -19,74 +20,61 @@ class StatusBar(QStatusBar):
     Status bar for main window.
     """
 
-    log_signal: Signal = Signal(str)
-    logger: Logger
+    __log_signal = Signal(str)
 
-    # Enter your Ko-fi URL here if applicable or remove the button below
-    KOFI_URL: str = "https://ko-fi.com/cutleast"
-    """URL to Ko-fi page."""
+    __logger: Logger
+
+    __status_label: QLabel
 
     __log_window: Optional[LogWindow] = None
 
     def __init__(self, log_visible: bool) -> None:
+        """
+        Args:
+            log_visible (bool): If the last log line will be displayed in the status bar.
+        """
+
         super().__init__()
 
-        self.logger = Logger.get()
-        self.logger.set_callback(self.log_signal.emit)
+        self.__logger = Logger.get()
+        self.__logger.set_callback(self.__log_signal.emit)
 
-        self.status_label = ElidedLabel()
-        self.status_label.setProperty("monospace", True)
-        self.status_label.setTextFormat(Qt.TextFormat.PlainText)
-        self.log_signal.connect(
-            lambda text: self.status_label.setText(
-                f"{text!r}"[1:-1].removesuffix("\\n")
-            ),
+        self.__init_ui()
+
+        self.__status_label.setVisible(log_visible)
+
+    def __init_ui(self) -> None:
+        self.setSizeGripEnabled(False)
+
+        self.__status_label = ElidedLabel()
+        self.__status_label.setProperty("monospace", True)
+        self.__status_label.setTextFormat(Qt.TextFormat.PlainText)
+        self.__log_signal.connect(
+            lambda text: self.__status_label.setText(cast(str, text).splitlines()[0]),
             Qt.ConnectionType.QueuedConnection,
         )
-        self.status_label.setMinimumWidth(100)
-        self.status_label.setVisible(log_visible)
-        self.insertPermanentWidget(0, self.status_label, stretch=1)
-
-        kofi_button = LinkButton(
-            StatusBar.KOFI_URL,
-            self.tr("Support me on Ko-fi"),
-            IconProvider.get_icon("ko-fi"),
-        )
-        # kofi_button.setFixedHeight(20)
-        self.addPermanentWidget(kofi_button)
+        self.insertPermanentWidget(0, self.__status_label, stretch=1)
 
         copy_log_button = CopyButton()
-        copy_log_button.setFixedSize(20, 20)
-        copy_log_button.setIconSize(QSize(16, 16))
         copy_log_button.clicked.connect(
-            lambda: QApplication.clipboard().setText(self.logger.get_content())
+            lambda: QApplication.clipboard().setText(self.__logger.get_content())
         )
         copy_log_button.setToolTip(self.tr("Copy log to clipboard"))
-        copy_log_button.setVisible(log_visible)
         self.addPermanentWidget(copy_log_button)
 
-        open_log_button = QPushButton()
-        open_log_button.setFixedSize(20, 20)
-        open_log_button.setIcon(IconProvider.get_qta_icon("mdi6.open-in-new"))
-        open_log_button.setIconSize(QSize(16, 16))
-        open_log_button.clicked.connect(self.__open_log_window)
+        open_log_button = IconButton()
+        IconProvider.bind_qta_icon(
+            open_log_button, open_log_button.setIcon, "mdi6.open-in-new"
+        )
         open_log_button.setToolTip(self.tr("View log"))
-        open_log_button.setVisible(log_visible)
+        open_log_button.clicked.connect(self.__open_log_window)
         self.addPermanentWidget(open_log_button)
 
     def __open_log_window(self) -> None:
-        self.__log_window = LogWindow(self.logger.get_content())
-        self.log_signal.connect(
-            self.__log_window.addMessage, Qt.ConnectionType.QueuedConnection
-        )
-        self.__log_window.show()
+        if self.__log_window is None:
+            self.__log_window = LogWindow(self.__logger.get_content())
+            self.__log_signal.connect(
+                self.__log_window.addMessage, Qt.ConnectionType.QueuedConnection
+            )
 
-    def close_log_window(self) -> None:
-        """
-        Closes the log window if it is open.
-        """
-
-        if self.__log_window is not None:
-            self.__log_window.close()
-
-        self.__log_window = None
+        WindowManager.get().show(self.__log_window, delete_on_close=False)

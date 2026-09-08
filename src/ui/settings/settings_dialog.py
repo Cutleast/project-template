@@ -5,8 +5,11 @@ Copyright (c) Cutleast
 import os
 import subprocess
 
+from cutleast_core_lib.core.config.exceptions import ConfigValidationError
 from cutleast_core_lib.core.utilities.exe_info import get_execution_info
+from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.utilities.icon_provider import IconProvider
+from cutleast_core_lib.ui.widgets.tab_widget import TabWidget
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (
     QDialog,
@@ -30,13 +33,22 @@ class SettingsDialog(QDialog):
     __app_config: AppConfig
 
     __vlayout: QVBoxLayout
+    __tab_widget: TabWidget
 
     __app_settings_widget: AppSettings
+
+    __validation_label: QLabel
     __save_button: QPushButton
 
     __restart_required: bool = False
+    __theme_update_required: bool = False
 
     def __init__(self, app_config: AppConfig) -> None:
+        """
+        Args:
+            app_config (AppConfig): Application configuration.
+        """
+
         super().__init__()
 
         self.__app_config = app_config
@@ -44,9 +56,16 @@ class SettingsDialog(QDialog):
         self.__init_ui()
         self.setWindowTitle(self.tr("Settings"))
 
+        self.__tab_widget.tabBar().hide()  # remove this when you add more tabs
+        # remove this when a scrollbar is required
+        self.__tab_widget.pane().setContentsMargins(0, 0, 0, 0)
+
         self.__app_settings_widget.changed_signal.connect(self.__on_change)
         self.__app_settings_widget.restart_required_signal.connect(
             self.__on_restart_required
+        )
+        self.__app_settings_widget.theme_update_required_signal.connect(
+            self.__on_theme_update_required
         )
 
     def __init_ui(self) -> None:
@@ -64,21 +83,34 @@ class SettingsDialog(QDialog):
         self.__vlayout.addLayout(hlayout)
 
         icon_label = QLabel()
-        icon_label.setPixmap(IconProvider.get_qta_icon("mdi6.cog").pixmap(42, 42))
+        IconProvider.bind_qta_icon(
+            icon_label,
+            lambda icon: icon_label.setPixmap(
+                icon.pixmap(
+                    ThemeManager.get().theme.metrics.icon_xl,
+                    ThemeManager.get().theme.metrics.icon_xl,
+                )
+            ),
+            "mdi6.cog",
+        )
         hlayout.addWidget(icon_label)
 
         title_label = QLabel(self.tr("Settings"))
-        title_label.setObjectName("h2")
+        title_label.setProperty("title", True)
         hlayout.addWidget(title_label)
 
         restart_hint_label = QLabel(
             self.tr("Settings marked with * require a restart to take effect.")
         )
+        restart_hint_label.setProperty("secondary", True)
         self.__vlayout.addWidget(restart_hint_label)
 
     def __init_settings_widget(self) -> None:
+        self.__tab_widget = TabWidget()
+        self.__vlayout.addWidget(self.__tab_widget)
+
         self.__app_settings_widget = AppSettings(self.__app_config)
-        self.__vlayout.addWidget(self.__app_settings_widget)
+        self.__tab_widget.addTab(self.__app_settings_widget, self.tr("App Settings"))
 
     def __init_footer(self) -> None:
         hlayout = QHBoxLayout()
@@ -90,6 +122,10 @@ class SettingsDialog(QDialog):
 
         hlayout.addStretch()
 
+        self.__validation_label = QLabel()
+        self.__validation_label.setProperty("state", "error")
+        hlayout.addWidget(self.__validation_label)
+
         self.__save_button = QPushButton(self.tr("Save"))
         self.__save_button.setDefault(True)
         self.__save_button.clicked.connect(self.__save)
@@ -98,14 +134,32 @@ class SettingsDialog(QDialog):
 
     def __on_change(self) -> None:
         self.setWindowTitle(self.tr("Settings") + "*")
-        self.__save_button.setEnabled(True)
+
+        try:
+            self.__app_settings_widget.validate()
+
+            self.__validation_label.setHidden(True)
+            self.__save_button.setEnabled(True)
+        except ConfigValidationError as ex:
+            self.__validation_label.setText(str(ex))
+            self.__validation_label.setVisible(True)
+            self.__save_button.setDisabled(True)
 
     def __on_restart_required(self) -> None:
         self.__restart_required = True
 
+    def __on_theme_update_required(self) -> None:
+        self.__theme_update_required = True
+
     def __save(self) -> None:
         self.__app_settings_widget.apply(self.__app_config)
         self.__app_config.save()
+
+        if self.__theme_update_required:
+            ThemeManager.get().set_primary_color(
+                self.__app_config.accent_color, apply=False
+            )
+            ThemeManager.get().set_ui_mode(self.__app_config.ui_mode)
 
         self.accept()
 

@@ -8,11 +8,12 @@ from typing import Optional, cast, override
 from cutleast_core_lib.base_app import BaseApp
 from cutleast_core_lib.core.utilities.localisation import detect_system_locale
 from cutleast_core_lib.core.utilities.singleton import Singleton
-from PySide6.QtCore import QTranslator
+from cutleast_core_lib.ui.theme.manager import ThemeManager
+from cutleast_core_lib.ui.utilities.state_manager import WidgetStateManager
+from PySide6.QtCore import QLocale, QTranslator
 
 from core.config.app_config import AppConfig
 from ui.main_window import MainWindow
-from ui.utilities.theme_manager import ThemeManager
 
 
 class App(BaseApp, Singleton):
@@ -23,6 +24,7 @@ class App(BaseApp, Singleton):
     APP_NAME: str = "Project Template"  # Insert your application name here
     APP_VERSION: str = "development"  # This gets replaced when building
 
+    @override
     def __init__(self, args: Namespace) -> None:
         Singleton.__init__(self)
         super().__init__(args)
@@ -34,17 +36,21 @@ class App(BaseApp, Singleton):
 
         super()._init()
 
+        WidgetStateManager.get().register_geometry("main_window", self.main_window)
+
     @override
     def _load_app_config(self) -> AppConfig:
         return AppConfig.load(self.config_path)
 
     @override
-    def _get_theme_manager(self) -> Optional[ThemeManager]:
-        return ThemeManager(self.app_config.accent_color, self.app_config.ui_mode)
-
-    @override
     def _init_main_window(self) -> MainWindow:
         self.__load_translation()
+        ThemeManager(
+            app=self,
+            initial_primary_color=self.app_config.accent_color,
+            initial_ui_mode=self.app_config.ui_mode,
+            qss_files=ThemeManager.CORE_RES_QSS_FILES + [":/style.qss"],
+        )
 
         return MainWindow(cast(AppConfig, self.app_config))
 
@@ -63,6 +69,7 @@ class App(BaseApp, Singleton):
             language = detect_system_locale() or "en_US"
         else:
             language = app_config.language.value
+            QLocale.setDefault(QLocale.Language[app_config.language.name])
 
         if language != "en_US":
             res_file: str = f":/loc/{language}.qm"
