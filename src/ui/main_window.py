@@ -4,6 +4,7 @@ Copyright (c) Cutleast
 
 from typing import override
 
+from cutleast_core_lib.core.config.manager import ConfigManager
 from cutleast_core_lib.core.utilities.updater import Updater
 from cutleast_core_lib.ui.utilities.window_manager import WindowManager
 from cutleast_core_lib.ui.widgets.about_dialog import AboutDialog
@@ -25,21 +26,24 @@ class MainWindow(QMainWindow):
     Main window of the application.
     """
 
+    __app_config_manager: ConfigManager[AppConfig]
     __app_config: AppConfig
 
     __menu_bar: MenuBar
     __main_widget: MainWidget
     __status_bar: StatusBar
 
-    def __init__(self, app_config: AppConfig) -> None:
+    def __init__(self, app_config_manager: ConfigManager[AppConfig]) -> None:
         """
         Args:
-            app_config (AppConfig): The application config.
+            app_config_manager (ConfigManager[AppConfig]):
+                Manager for the application configuration.
         """
 
         super().__init__()
 
-        self.__app_config = app_config
+        self.__app_config_manager = app_config_manager
+        self.__app_config = app_config_manager.config
 
         self.resize(500, 400)
 
@@ -50,6 +54,8 @@ class MainWindow(QMainWindow):
         self.__menu_bar.about_signal.connect(self.__show_about)
         self.__menu_bar.about_qt_signal.connect(self.__show_about_qt)
         self.__menu_bar.exit_signal.connect(self.close)
+
+        self.__app_config_manager.saved.connect(self.__on_config_saved)
 
     def __init_ui(self) -> None:
         self.__init_menu_bar()
@@ -65,11 +71,15 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self.__main_widget)
 
     def __init_status_bar(self) -> None:
-        self.__status_bar = StatusBar(self.__app_config.log_visible)
+        self.__status_bar = StatusBar()
+        self.__status_bar.set_log_visible(self.__app_config.log_visible)
         self.setStatusBar(self.__status_bar)
 
+    def __on_config_saved(self) -> None:
+        self.__status_bar.set_log_visible(self.__app_config.log_visible)
+
     def __open_settings(self) -> None:
-        SettingsDialog(self.__app_config).exec()
+        SettingsDialog(self.__app_config_manager).exec()
 
     def __check_for_updates(self) -> None:
         upd = Updater.get()
@@ -84,16 +94,7 @@ class MainWindow(QMainWindow):
             messagebox.exec()
 
     def __show_about(self) -> None:
-        from app import App
-
-        AboutDialog(
-            app_name=App.APP_NAME,
-            app_version=App.APP_VERSION,
-            app_icon=App.get().windowIcon(),
-            app_license="",
-            licenses=LICENSES,
-            parent=self,
-        ).exec()
+        AboutDialog(app_license="", licenses=LICENSES, parent=self).exec()
 
     def __show_about_qt(self) -> None:
         QMessageBox.aboutQt(self, self.tr("About Qt"))

@@ -5,6 +5,7 @@ Copyright (c) Cutleast
 from typing import cast, override
 
 from cutleast_core_lib.core.config.app_config import AppConfig as BaseAppConfig
+from cutleast_core_lib.core.config.manager import ConfigManager
 from cutleast_core_lib.ui.settings.app_settings import AppSettings as BaseAppSettings
 from cutleast_core_lib.ui.widgets.enum_dropdown import EnumDropdown
 
@@ -19,8 +20,8 @@ class AppSettings(BaseAppSettings):
     __language_box: EnumDropdown[AppConfig.AppLanguage]
 
     @override
-    def __init__(self, initial_config: BaseAppConfig) -> None:
-        super().__init__(initial_config)
+    def __init__(self, config_manager: ConfigManager[AppConfig]) -> None:
+        super().__init__(cast(ConfigManager[BaseAppConfig], config_manager))
 
         self.__language_box.currentValueChanged.connect(
             lambda _: self.changed_signal.emit()
@@ -33,7 +34,7 @@ class AppSettings(BaseAppSettings):
     def _init_ui(self) -> None:
         super()._init_ui()
 
-        config = cast(AppConfig, self._initial_config)
+        config = cast(AppConfig, self._config)
         self.__language_box = EnumDropdown(AppConfig.AppLanguage, config.language)
         self.__language_box.installEventFilter(self)
         self._basic_flayout.insertRow(
@@ -41,8 +42,9 @@ class AppSettings(BaseAppSettings):
         )
 
     @override
-    def apply(self, config: BaseAppConfig) -> None:
-        super().apply(config)
+    def apply(self) -> None:
+        with self._config_manager.edit():
+            super().apply()
 
-        config = cast(AppConfig, config)
-        config.language = self.__language_box.getCurrentValue()
+            config = cast(AppConfig, self._config)
+            config.language = self.__language_box.getCurrentValue()

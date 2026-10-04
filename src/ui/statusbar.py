@@ -2,7 +2,7 @@
 Copyright (c) Cutleast
 """
 
-from typing import Optional, cast
+from typing import Optional, cast, override
 
 from cutleast_core_lib.core.utilities.logger import Logger
 from cutleast_core_lib.ui.utilities.icon_provider import IconProvider
@@ -28,20 +28,14 @@ class StatusBar(QStatusBar):
 
     __log_window: Optional[LogWindow] = None
 
-    def __init__(self, log_visible: bool) -> None:
-        """
-        Args:
-            log_visible (bool): If the last log line will be displayed in the status bar.
-        """
-
+    @override
+    def __init__(self) -> None:
         super().__init__()
 
         self.__logger = Logger.get()
         self.__logger.set_callback(self.__log_signal.emit)
 
         self.__init_ui()
-
-        self.__status_label.setVisible(log_visible)
 
     def __init_ui(self) -> None:
         self.setSizeGripEnabled(False)
@@ -78,3 +72,11 @@ class StatusBar(QStatusBar):
             )
 
         WindowManager.get().show(self.__log_window, delete_on_close=False)
+
+    def set_log_visible(self, visible: bool) -> None:
+        """
+        Args:
+            visible (bool): If the last log line will be displayed in the status bar.
+        """
+
+        self.__status_label.setVisible(visible)

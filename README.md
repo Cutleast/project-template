@@ -23,7 +23,7 @@ When using Nuitka as the build backend:
 
 ### These are some placeholders you should replace:
 
-- [ ] [LICENSE:1](./LICENSE) & [src/ui/main_window.py:83](./src/ui/main_window.py#L83) - add your desired license
+- [ ] [LICENSE:1](./LICENSE) & [src/ui/main_window.py:97](./src/ui/main_window.py#L97) - add your desired license
 - [ ] [src/core/config/app_config.py:26-35](./src/core/config/app_config.py#L26-36)
 - [ ] [src/ui/menubar.py:37](./src/ui/menubar.py#L37)
 - [ ] [src/ui/menubar.py:41](./src/ui/menubar.py#L41)

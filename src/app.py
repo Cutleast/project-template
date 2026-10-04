@@ -6,6 +6,8 @@ from argparse import Namespace
 from typing import Optional, cast, override
 
 from cutleast_core_lib.base_app import BaseApp
+from cutleast_core_lib.core.config.app_config import AppConfig as BaseAppConfig
+from cutleast_core_lib.core.config.manager import ConfigManager
 from cutleast_core_lib.core.utilities.localisation import detect_system_locale
 from cutleast_core_lib.core.utilities.singleton import Singleton
 from cutleast_core_lib.ui.theme.manager import ThemeManager
@@ -39,8 +41,8 @@ class App(BaseApp, Singleton):
         WidgetStateManager.get().register_geometry("main_window", self.main_window)
 
     @override
-    def _load_app_config(self) -> AppConfig:
-        return AppConfig.load(self.config_path)
+    def _init_app_config_manager(self) -> ConfigManager[BaseAppConfig]:
+        return ConfigManager(AppConfig, self.config_path)
 
     @override
     def _init_main_window(self) -> MainWindow:
@@ -52,7 +54,7 @@ class App(BaseApp, Singleton):
             qss_files=ThemeManager.CORE_RES_QSS_FILES + [":/style.qss"],
         )
 
-        return MainWindow(cast(AppConfig, self.app_config))
+        return MainWindow(cast(ConfigManager[AppConfig], self.app_config_manager))
 
     def __load_translation(self) -> None:
         """

@@ -6,6 +6,7 @@ import os
 import subprocess
 
 from cutleast_core_lib.core.config.exceptions import ConfigValidationError
+from cutleast_core_lib.core.config.manager import ConfigManager
 from cutleast_core_lib.core.utilities.exe_info import get_execution_info
 from cutleast_core_lib.ui.theme.manager import ThemeManager
 from cutleast_core_lib.ui.utilities.icon_provider import IconProvider
@@ -30,6 +31,7 @@ class SettingsDialog(QDialog):
     Dialog for application settings.
     """
 
+    __app_config_manager: ConfigManager[AppConfig]
     __app_config: AppConfig
 
     __vlayout: QVBoxLayout
@@ -43,15 +45,17 @@ class SettingsDialog(QDialog):
     __restart_required: bool = False
     __theme_update_required: bool = False
 
-    def __init__(self, app_config: AppConfig) -> None:
+    def __init__(self, app_config_manager: ConfigManager[AppConfig]) -> None:
         """
         Args:
-            app_config (AppConfig): Application configuration.
+            app_config_manager (ConfigManager[AppConfig]):
+                Manager for the application configuration.
         """
 
         super().__init__()
 
-        self.__app_config = app_config
+        self.__app_config_manager = app_config_manager
+        self.__app_config = app_config_manager.config
 
         self.__init_ui()
         self.setWindowTitle(self.tr("Settings"))
@@ -109,7 +113,7 @@ class SettingsDialog(QDialog):
         self.__tab_widget = TabWidget()
         self.__vlayout.addWidget(self.__tab_widget)
 
-        self.__app_settings_widget = AppSettings(self.__app_config)
+        self.__app_settings_widget = AppSettings(self.__app_config_manager)
         self.__tab_widget.addTab(self.__app_settings_widget, self.tr("App Settings"))
 
     def __init_footer(self) -> None:
@@ -152,8 +156,8 @@ class SettingsDialog(QDialog):
         self.__theme_update_required = True
 
     def __save(self) -> None:
-        self.__app_settings_widget.apply(self.__app_config)
-        self.__app_config.save()
+        self.__app_settings_widget.apply()
+        self.__app_config_manager.save()
 
         if self.__theme_update_required:
             ThemeManager.get().set_primary_color(

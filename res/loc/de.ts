@@ -4,23 +4,23 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="52"/>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="62"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="47"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="58"/>
         <source>About</source>
         <translation>Über</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="90"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="86"/>
         <source>Created by Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Licensed under </source>
         <translation>Erstellt von Cutleast (&lt;a href=&apos;https://www.nexusmods.com/users/65733731&apos;&gt;NexusMods&lt;/a&gt; | &lt;a href=&apos;https://github.com/cutleast&apos;&gt;GitHub&lt;/a&gt; | &lt;a href=&apos;https://ko-fi.com/cutleast&apos;&gt;Ko-Fi&lt;/a&gt;)&lt;br&gt;&lt;br&gt;Lizensiert unter </translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="97"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="93"/>
         <source>&lt;&lt;Put your translator information here.&gt;&gt;</source>
         <translation>&lt;&lt;Put your translator information here.&gt;&gt;</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="109"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/about_dialog.py" line="105"/>
         <source>Used Software</source>
         <translation>Verwendete Software</translation>
     </message>
@@ -28,48 +28,48 @@
 <context>
     <name>AppSettings</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="97"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="98"/>
         <source>Basic App Settings</source>
         <translation>Grundlegende Appeinstellungen</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="106"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="107"/>
         <source>Number of newest log files to keep</source>
         <translation>Anzahl der neuesten zu behaltenden Logdateien</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="110"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="111"/>
         <source>Log Level</source>
         <translation>Logging Level</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="115"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="116"/>
         <source>Display log at the bottom of the main window</source>
         <translation>Log im unteren Bereich des Hauptfensters anzeigen</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="123"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="124"/>
         <source>Accent Color</source>
         <translation>Akzentfarbe</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="126"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="127"/>
         <source>UI Mode</source>
         <translation>UI-Modus</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="128"/>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="145"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="129"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="146"/>
         <source>Clear Cache</source>
         <translation>Cache leeren</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="154"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="155"/>
         <source>Accent color must be a valid hexadecimal color code!</source>
         <translation>Akzentfarbe muss ein gültiger hexadezimaler Farbcode sein!</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/app_settings.py" line="40"/>
+        <location filename="src/ui/settings/app_settings.py" line="41"/>
         <source>App language:</source>
         <translation>Sprache der App:</translation>
     </message>
@@ -77,9 +77,9 @@
 <context>
     <name>BaseApp</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/base_app.py" line="125"/>
+        <location filename="core-lib/src/cutleast_core_lib/base_app.py" line="133"/>
         <source>Stylesheet Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Stylesheet-Editor</translation>
     </message>
 </context>
 <context>
@@ -184,12 +184,12 @@
 <context>
     <name>ExceptionHandler</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exception_handler.py" line="80"/>
+        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exception_handler.py" line="86"/>
         <source>An unexpected error occured: </source>
         <translation>Ein unerwarteter Fehler ist aufgetreten: </translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exception_handler.py" line="85"/>
+        <location filename="core-lib/src/cutleast_core_lib/core/utilities/exception_handler.py" line="91"/>
         <source>Error</source>
         <translation>Fehler</translation>
     </message>
@@ -221,17 +221,17 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="src/ui/main_window.py" line="80"/>
+        <location filename="src/ui/main_window.py" line="90"/>
         <source>No Updates Available</source>
         <translation>Keine Updates verfügbar</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="81"/>
+        <location filename="src/ui/main_window.py" line="91"/>
         <source>There are no updates available.</source>
         <translation>Es sind keine Updates verfügbar.</translation>
     </message>
     <message>
-        <location filename="src/ui/main_window.py" line="99"/>
+        <location filename="src/ui/main_window.py" line="100"/>
         <source>About Qt</source>
         <translation>Über Qt</translation>
     </message>
@@ -241,7 +241,7 @@
     <message>
         <location filename="src/ui/menubar.py" line="72"/>
         <source>Support me on Ko-fi</source>
-        <translation type="unfinished">Unterstütze mich auf Ko-Fi</translation>
+        <translation>Unterstütze mich auf Ko-Fi</translation>
     </message>
     <message>
         <location filename="src/ui/menubar.py" line="103"/>
@@ -394,62 +394,70 @@
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="57"/>
-        <location filename="src/ui/settings/settings_dialog.py" line="98"/>
-        <location filename="src/ui/settings/settings_dialog.py" line="136"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="61"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="102"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="140"/>
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="103"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="107"/>
         <source>Settings marked with * require a restart to take effect.</source>
         <translation>Mit * markierte Einstellungen benötigen einen Neustart, um wirksam zu werden.</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="113"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="117"/>
         <source>App Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Appeinstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="119"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="123"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="129"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="133"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="168"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="172"/>
         <source>Restart required</source>
         <translation>Neustart erforderlich</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="171"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="175"/>
         <source>The app must be restarted for the changes to take effect! Restart now?</source>
         <translation>Die App muss neugestartet werden, damit die Änderungen wirksam werden! Jetzt neustarten?</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="177"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="181"/>
         <source>No</source>
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="178"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="182"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
 </context>
 <context>
+    <name>SpinnerDisplayWidget</name>
+    <message>
+        <location filename="core-lib/src/cutleast_core_lib/ui/progress/spinner_display.py" line="57"/>
+        <source>Cancel</source>
+        <translation>Abbrechen</translation>
+    </message>
+</context>
+<context>
     <name>StatusBar</name>
     <message>
-        <location filename="src/ui/statusbar.py" line="62"/>
+        <location filename="src/ui/statusbar.py" line="56"/>
         <source>Copy log to clipboard</source>
         <translation>Log in Zwischenablage kopieren</translation>
     </message>
     <message>
-        <location filename="src/ui/statusbar.py" line="69"/>
+        <location filename="src/ui/statusbar.py" line="63"/>
         <source>View log</source>
         <translation>Log anschauen</translation>
     </message>
@@ -459,78 +467,78 @@
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="126"/>
         <source>Runtime preview only. Changes are discarded when the application exits.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nur Laufzeitvorschau. Änderungen werden beim Beenden der Anwendung verworfen.</translation>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="135"/>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="345"/>
         <source>Line {line}, Column {column}</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeile {line}, Spalte {column}</translation>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="157"/>
         <source>Go to previous occurrence</source>
-        <translation type="unfinished"></translation>
+        <translation>Zum vorherigen Treffer gehen</translation>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="164"/>
         <source>Go to next occurrence</source>
-        <translation type="unfinished"></translation>
+        <translation>Zum nächsten Treffer gehen</translation>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="171"/>
         <source>Hide search bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Suchleiste ausblenden</translation>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="184"/>
         <source>Widget:</source>
-        <translation type="unfinished"></translation>
+        <translation>Widget:</translation>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="191"/>
         <source>Object path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Objektpfad:</translation>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="200"/>
         <source>QSS selector:</source>
-        <translation type="unfinished"></translation>
+        <translation>QSS-Selektor:</translation>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="213"/>
         <source>Insert selector at cursor position</source>
-        <translation type="unfinished"></translation>
+        <translation>Selektor an Cursorposition einfügen</translation>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="231"/>
         <source>Inspect a widget in the application. Escape or right-click cancels.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ein Widget in der Anwendung untersuchen. Escape oder Rechtsklick zum Abbrechen drücken.</translation>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="237"/>
         <source>UI mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>UI-Modus:</translation>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="243"/>
         <source>Revert runtime stylesheet</source>
-        <translation type="unfinished"></translation>
+        <translation>Laufzeit-Stylesheet zurücksetzen</translation>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="246"/>
         <source>Apply runtime stylesheet</source>
-        <translation type="unfinished"></translation>
+        <translation>Laufzeit-Stylesheet anwenden</translation>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="376"/>
         <source>Theme changed</source>
-        <translation type="unfinished"></translation>
+        <translation>Theme geändert</translation>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/widgets/stylesheet_editor.py" line="379"/>
         <source>The application theme has changed. Do you want to reset the stylesheet to the current theme?</source>
-        <translation type="unfinished"></translation>
+        <translation>Das Anwendungstheme hat sich geändert. Möchtest du das Laufzeit-Stylesheet auf das aktuelle Theme zurücksetzen?</translation>
     </message>
 </context>
 <context>
@@ -554,12 +562,12 @@
         <translation>Neues Element hinzufügen...</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="260"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="261"/>
         <source>Remove selected item(s)...</source>
         <translation>Ausgewählte(s) Element(e) entfernen...</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="260"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/widgets/tree_widget_editor.py" line="261"/>
         <source>Del</source>
         <translation>Entf</translation>
     </message>
@@ -579,17 +587,17 @@
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/theme/ui_mode.py" line="28"/>
         <source>Dark</source>
-        <translation type="unfinished">Dunkel</translation>
+        <translation>Dunkel</translation>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/theme/ui_mode.py" line="30"/>
         <source>Light</source>
-        <translation type="unfinished">Hell</translation>
+        <translation>Hell</translation>
     </message>
     <message>
         <location filename="core-lib/src/cutleast_core_lib/ui/theme/ui_mode.py" line="32"/>
         <source>System</source>
-        <translation type="unfinished">System</translation>
+        <translation>System</translation>
     </message>
 </context>
 <context>
@@ -638,7 +646,7 @@
     <message>
         <location filename="core-lib/src/cutleast_core_lib/core/config/validation_utils.py" line="79"/>
         <source>The path &apos;{path}&apos; does not exist!</source>
-        <translation type="unfinished"></translation>
+        <translation>Der Pfad &apos;{path}&apos; existiert nicht!</translation>
     </message>
 </context>
 <context>
