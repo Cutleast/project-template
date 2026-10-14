@@ -60,7 +60,6 @@ class SettingsDialog(QDialog):
         self.__init_ui()
         self.setWindowTitle(self.tr("Settings"))
 
-        self.__tab_widget.tabBar().hide()  # remove this when you add more tabs
         # remove this when a scrollbar is required
         self.__tab_widget.pane().setContentsMargins(0, 0, 0, 0)
 
@@ -111,6 +110,7 @@ class SettingsDialog(QDialog):
 
     def __init_settings_widget(self) -> None:
         self.__tab_widget = TabWidget()
+        self.__tab_widget.tabBar().setAutoHide(True)
         self.__vlayout.addWidget(self.__tab_widget)
 
         self.__app_settings_widget = AppSettings(self.__app_config_manager)
@@ -120,15 +120,12 @@ class SettingsDialog(QDialog):
         hlayout = QHBoxLayout()
         self.__vlayout.addLayout(hlayout)
 
-        cancel_button = QPushButton(self.tr("Cancel"))
-        cancel_button.clicked.connect(self.reject)
-        hlayout.addWidget(cancel_button)
-
-        hlayout.addStretch()
-
         self.__validation_label = QLabel()
+        self.__validation_label.setAlignment(
+            Qt.AlignmentFlag.AlignRight | Qt.AlignmentFlag.AlignVCenter
+        )
         self.__validation_label.setProperty("state", "error")
-        hlayout.addWidget(self.__validation_label)
+        hlayout.addWidget(self.__validation_label, stretch=1)
 
         self.__save_button = QPushButton(self.tr("Save"))
         self.__save_button.setDefault(True)
@@ -136,18 +133,21 @@ class SettingsDialog(QDialog):
         self.__save_button.setDisabled(True)
         hlayout.addWidget(self.__save_button)
 
+        cancel_button = QPushButton(self.tr("Cancel"))
+        cancel_button.clicked.connect(self.reject)
+        hlayout.addWidget(cancel_button)
+
     def __on_change(self) -> None:
         self.setWindowTitle(self.tr("Settings") + "*")
 
         try:
             self.__app_settings_widget.validate()
-
-            self.__validation_label.setHidden(True)
-            self.__save_button.setEnabled(True)
         except ConfigValidationError as ex:
             self.__validation_label.setText(str(ex))
-            self.__validation_label.setVisible(True)
             self.__save_button.setDisabled(True)
+        else:
+            self.__validation_label.setText("")
+            self.__save_button.setEnabled(True)
 
     def __on_restart_required(self) -> None:
         self.__restart_required = True
@@ -180,9 +180,8 @@ class SettingsDialog(QDialog):
             )
             messagebox.button(QMessageBox.StandardButton.No).setText(self.tr("No"))
             messagebox.button(QMessageBox.StandardButton.Yes).setText(self.tr("Yes"))
-            choice = messagebox.exec()
 
-            if choice == QMessageBox.StandardButton.Yes:
+            if messagebox.exec() == QMessageBox.StandardButton.Yes:
                 from app import App
 
                 if App.get().main_window.close():

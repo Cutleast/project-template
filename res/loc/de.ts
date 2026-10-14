@@ -33,38 +33,38 @@
         <translation>Grundlegende Appeinstellungen</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="107"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="108"/>
         <source>Number of newest log files to keep</source>
         <translation>Anzahl der neuesten zu behaltenden Logdateien</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="111"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="112"/>
         <source>Log Level</source>
         <translation>Logging Level</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="116"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="117"/>
         <source>Display log at the bottom of the main window</source>
         <translation>Log im unteren Bereich des Hauptfensters anzeigen</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="124"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="125"/>
         <source>Accent Color</source>
         <translation>Akzentfarbe</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="127"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="128"/>
         <source>UI Mode</source>
         <translation>UI-Modus</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="129"/>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="146"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="130"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="147"/>
         <source>Clear Cache</source>
         <translation>Cache leeren</translation>
     </message>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="155"/>
+        <location filename="core-lib/src/cutleast_core_lib/ui/settings/app_settings.py" line="156"/>
         <source>Accent color must be a valid hexadecimal color code!</source>
         <translation>Akzentfarbe muss ein gültiger hexadezimaler Farbcode sein!</translation>
     </message>
@@ -77,7 +77,7 @@
 <context>
     <name>BaseApp</name>
     <message>
-        <location filename="core-lib/src/cutleast_core_lib/base_app.py" line="133"/>
+        <location filename="core-lib/src/cutleast_core_lib/base_app.py" line="128"/>
         <source>Stylesheet Editor</source>
         <translation>Stylesheet-Editor</translation>
     </message>
@@ -395,13 +395,13 @@
     <name>SettingsDialog</name>
     <message>
         <location filename="src/ui/settings/settings_dialog.py" line="61"/>
-        <location filename="src/ui/settings/settings_dialog.py" line="102"/>
-        <location filename="src/ui/settings/settings_dialog.py" line="140"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="101"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="141"/>
         <source>Settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="107"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="106"/>
         <source>Settings marked with * require a restart to take effect.</source>
         <translation>Mit * markierte Einstellungen benötigen einen Neustart, um wirksam zu werden.</translation>
     </message>
@@ -411,12 +411,12 @@
         <translation>Appeinstellungen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="123"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="136"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="src/ui/settings/settings_dialog.py" line="133"/>
+        <location filename="src/ui/settings/settings_dialog.py" line="130"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>

@@ -7,7 +7,7 @@
 	"extensions": {
 		"recommendations": [
 			"njpwerner.autodocstring",
-			"detachhead.basedpyright",
+			"meta.pyrefly",
 			"ms-python.python",
 			"ms-python.debugpy",
 			"theqtcompany.qt-core",
@@ -133,59 +133,6 @@
 				"runOptions": {
 					"runOn": "folderOpen",
 				}
-			},
-			{
-				"label": "pyright",
-				"type": "process",
-				"command": "uv",
-				"args": [
-					"run",
-					"--no-sync",
-					"pyright",
-					"--watch",
-					"--project",
-					"${workspaceFolder}/pyproject.toml",
-					"--pythonpath",
-					"${workspaceFolder}/.venv/Scripts/python.exe"
-				],
-				"options": {
-					"cwd": "${workspaceFolder}",
-					"env": {
-						"FORCE_COLOR": "0"
-					}
-				},
-				"isBackground": true,
-				"presentation": {
-					"reveal": "never",
-					"panel": "dedicated",
-					"clear": false
-				},
-				"problemMatcher": [
-					{
-						"owner": "Pyright",
-						"source": "Pyright",
-						"applyTo": "allDocuments",
-						"fileLocation": "absolute",
-						"pattern": {
-							"regexp": "^\\s+(.+):(\\d+):(\\d+) - (error|warning|info)(?:rmation)?: (.*)$",
-							"file": 1,
-							"line": 2,
-							"column": 3,
-							"severity": 4,
-							"message": 5
-						},
-						"background": {
-							"activeOnStart": true,
-							"beginsPattern": "^(?:\\S.*\\.pyi?|\\d+ errors?, \\d+ warnings?, \\d+ informations?|[Pp]yright \\S.*)$",
-							"endsPattern": "^Watching for file changes\\.\\.\\.$"
-						}
-					}
-				],
-				"runOptions": {
-					"runOn": "folderOpen",
-					"instanceLimit": 1
-				},
-				"detail": "Checks the configured Python sources and watches for changes."
 			}
 		]
 	},
@@ -203,18 +150,8 @@
 		"python.testing.pytestEnabled": true,
 		"python.testing.unittestEnabled": false,
 		"xml.format.maxLineWidth": 0,
-		"python.analysis.autoFormatStrings": true,
-		"python.analysis.autoImportCompletions": true,
-		"python.analysis.diagnosticMode": "openFilesOnly",
-		"python.analysis.generateWithTypeAnnotation": true,
-		"python.analysis.languageServerMode": "default",
-		"python.analysis.typeCheckingMode": "strict",
-		"python.analysis.stubPath": "stubs",
+		"python.pyrefly.diagnosticMode": "workspace",
 		"debugpy.debugJustMyCode": false,
-		"basedpyright.analysis.autoFormatStrings": true,
-		"basedpyright.analysis.autoImportCompletions": true,
-		"basedpyright.analysis.diagnosticMode": "openFilesOnly",
-		"basedpyright.analysis.typeCheckingMode": "strict",
 		"python.testing.autoTestDiscoverOnSavePattern": "**/tests/**/*.py",
 		"python.testing.autoTestDiscoverOnSaveEnabled": true,
 		"python.testing.pytestArgs": [
